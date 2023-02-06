@@ -1,0 +1,95 @@
+body {
+    background: linear-gradient(to right, #bbb, white, #bbb);
+    margin-top: 100px;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#in p {
+    padding: 0 10px 0 30px;
+}
+
+#in input {
+    margin: 10px;
+}
+
+table {
+    margin: 30px;
+    border-collapse: collapse;
+    width: 100%;
+    border: 4px dotted black;
+    border-radius: 10px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #c9c9c9;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 2px solid gray;
+    background-color: transparent;
+    text-align: right;
+}
+
+input[type="number"] {
+    background-color: transparent;
+    width: 40%;
+    padding: 0 10px;
+    border: 2px dashed gray;
+    border-radius: 5px;
+    text-align: right;
+    caret-color: rgb(203, 0, 0);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ddd;
+    border: none;
+    min-width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    font-weight: 600;
+    animation-name: myanimation;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    color: #fff;
+    background-color: black;
+}
+
+@keyframes myanimation {
+    from {
+        background-color: #ddd;
+        color: black;
+    }
+
+    to {
+        color: #fff;
+        background-color: black;
+        font-weight: 600;
+    }
+}
