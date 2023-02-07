@@ -1,18 +1,18 @@
-~$ pwd																			                                    //reads the location
+~$ pwd                                                                          //reads the location
 /home/user
-~$ last																			                                     //gives the last login logs
+~$ last                                                                         //gives the last login logs
 
 wtmp begins Wed May 27 14:50:11 2020
-~$ last | grep "Feb  1" | grep "Feb  7"								                    			//extracting all logins that contain the desired date/time range
-~$ last | grep "Feb  1" | grep "Feb  7" | awk '{print $5, $6}'					        //extracting only login times within the date/time range
+~$ last | grep "Feb  1" | grep "Feb  7"		                                    //extracting all logins that contain the desired date/time range
+~$ last | grep "Feb  1" | grep "Feb  7" | awk '{print $5, $6}'                  //extracting only login times within the date/time range
 ~$ last | grep "Feb  1" | grep "Feb  7" | awk '{print $5, $6}' > login_logs.txt	//pipeing the output of previous command into a text file
-~$ mkdir logs                                 																	//Creating a new directory
-~$ mv login_logs.txt logs/										                          				//moving the text files into it
-~$ tar -cvf logs.tar logs/														                          //Introducing tar to create an archive of the "logs" directory
+~$ mkdir logs                           										//Creating a new directory
+~$ mv login_logs.txt logs/				                          				//moving the text files into it
+~$ tar -cvf logs.tar logs/                      		                        //Introducing tar to create an archive of the "logs" directory
 logs/
 logs/login_logs.txt
-~$ gzip logs.tar                                																//compressing the logs.tar archive using gzip
+~$ gzip logs.tar                                								//compressing the logs.tar archive using gzip
 ~$ pwd
 /home/user
-~$ ls																			                                      //listing out the final contenets
+~$ ls       							                                        //listing out the final contenets
 logs  logs.tar.gz
