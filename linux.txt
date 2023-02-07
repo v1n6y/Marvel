@@ -1,4 +1,4 @@
-~$ pwd																			//reads your location
+~$ pwd																			//reads the location
 /home/user
 ~$ last																			//gives the last login logs
 
