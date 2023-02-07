@@ -1,41 +1,18 @@
-export "PS1=$ "
-$ pwd
-/home/cg/root/63e2386864f09
+~$ pwd																			//reads your location
+/home/user
+~$ last																			//gives the last login logs
 
-$ cd /etc/..
-
-$ pwd								//reads your location
-/
-
-$ mkdir /tmp/test					//creates directory
-
-$ cd tmp/test						//dives into mentioned path
-
-$ > blank.txt						//creating blank file
-
-$ ls								//listing the contents of the folder
-blank.txt
-
-$ for i in {1..2600}; do mkdir F$i; done	//creating 2600 folders
-
-$ > count.txt						//a blank file to count and list them
-
-$ wc -l count.txt					//initial count = 0
-0 count.txt
-
-$ ls > count.txt						//listing all the files in current folder into the blank file
-
-$ wc -l count.txt					//final count = 2600 + 2
-2602 count.txt						//as both the count.txt and blank.txt files are included with new 2600 files
-
-$ echo "This is the file one." > file1.txt	
-
-$ echo "This is the file two." > file2.txt
-
-$ cat file1.txt file2.txt > file.txt		//concatination of two text files
-
-$ cat file.txt						//display of the concatinated content
-This is the file one.
-This is the file two.
-
-$ 
+wtmp begins Wed May 27 14:50:11 2020
+~$ last | grep "Feb  1" | grep "Feb  7"											//extracting all logins that contain the desired date/time range
+~$ last | grep "Feb  1" | grep "Feb  7" | awk '{print $5, $6}'					//extracting only login times within the date/time range
+~$ last | grep "Feb  1" | grep "Feb  7" | awk '{print $5, $6}' > login_logs.txt	//pipeing the output of previous command into a text file
+~$ mkdir logs																	//Creating a new directory
+~$ mv login_logs.txt logs/														//moving the text files into it
+~$ tar -cvf logs.tar logs/														//Introducing tar to create an archive of the "logs" directory
+logs/
+logs/login_logs.txt
+~$ gzip logs.tar																//compressing the logs.tar archive using gzip
+~$ pwd
+/home/user
+~$ ls																			//listing out the final contenets
+logs  logs.tar.gz
