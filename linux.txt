@@ -18,23 +18,23 @@ blank.txt
 
 $ for i in {1..2600}; do mkdir F$i; done	//creating 2600 folders
 
-$ > count.txt						//a blank file to count and list them
+$ > count.txt							//a blank file to count and list them
 
-$ wc -l count.txt					//initial count = 0
+$ wc -l count.txt						//initial count = 0
 0 count.txt
 
 $ ls > count.txt						//listing all the files in current folder into the blank file
 
-$ wc -l count.txt					//final count = 2600 + 2
-2602 count.txt						//as both the count.txt and blank.txt files are included with new 2600 files
+$ wc -l count.txt						//final count = 2600 + 2
+2602 count.txt							//as both the count.txt and blank.txt files are included with new 2600 files
 
 $ echo "This is the file one." > file1.txt	
 
 $ echo "This is the file two." > file2.txt
 
-$ cat file1.txt file2.txt > file.txt		//concatination of two text files
+$ cat file1.txt file2.txt > file.txt	//concatination of two text files
 
-$ cat file.txt						//display of the concatinated content
+$ cat file.txt							//display of the concatinated content
 This is the file one.
 This is the file two.
 
