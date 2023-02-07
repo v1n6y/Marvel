@@ -1,7 +1,7 @@
 # Marvel
 Different assigned tasks!
 
-Task 4 - Implementation of Task 3 recipe program with promises and 
+Task 3 - Implementation of Task 3 recipe program with promises and 
 
 Here are the potential benefits and improvements of using the same listed:
 
